@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AC3554041EBBA451008DF130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3554031EBBA451008DF130 /* AppDelegate.swift */; };
-		AC3554061EBBA451008DF130 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3554051EBBA451008DF130 /* ViewController.swift */; };
+		AC3554061EBBA451008DF130 /* TaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3554051EBBA451008DF130 /* TaskTableViewController.swift */; };
 		AC3554091EBBA451008DF130 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC3554071EBBA451008DF130 /* Main.storyboard */; };
 		AC35540B1EBBA451008DF130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC35540A1EBBA451008DF130 /* Assets.xcassets */; };
 		AC35540E1EBBA451008DF130 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC35540C1EBBA451008DF130 /* LaunchScreen.storyboard */; };
@@ -28,7 +28,7 @@
 /* Begin PBXFileReference section */
 		AC3554001EBBA451008DF130 /* Populate UITableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Populate UITableView.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC3554031EBBA451008DF130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AC3554051EBBA451008DF130 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AC3554051EBBA451008DF130 /* TaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewController.swift; sourceTree = "<group>"; };
 		AC3554081EBBA451008DF130 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC35540A1EBBA451008DF130 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC35540D1EBBA451008DF130 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				AC3554031EBBA451008DF130 /* AppDelegate.swift */,
-				AC3554051EBBA451008DF130 /* ViewController.swift */,
+				AC3554051EBBA451008DF130 /* TaskTableViewController.swift */,
 				AC3554071EBBA451008DF130 /* Main.storyboard */,
 				AC35540A1EBBA451008DF130 /* Assets.xcassets */,
 				AC35540C1EBBA451008DF130 /* LaunchScreen.storyboard */,
@@ -201,7 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC3554061EBBA451008DF130 /* ViewController.swift in Sources */,
+				AC3554061EBBA451008DF130 /* TaskTableViewController.swift in Sources */,
 				AC3554041EBBA451008DF130 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +412,7 @@
 				AC35541F1EBBA451008DF130 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC3554201EBBA451008DF130 /* Build configuration list for PBXNativeTarget "Populate UITableViewTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +421,7 @@
 				AC3554221EBBA451008DF130 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
