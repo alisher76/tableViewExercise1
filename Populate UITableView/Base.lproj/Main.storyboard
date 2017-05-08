@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F67a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F67a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jCK-iJ-3yn">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Task Table View Controller-->
+        <!--Task-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TaskTableViewController" customModule="Populate_UITableView" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,13 +32,90 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="gDA-3G-RZD" secondAttribute="trailing" id="33a-lx-AdG"/>
-                            <constraint firstItem="gDA-3G-RZD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="8be-fJ-NxP"/>
+                            <constraint firstItem="gDA-3G-RZD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-44" id="8be-fJ-NxP"/>
                             <constraint firstItem="gDA-3G-RZD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BmX-gC-8n0"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gDA-3G-RZD" secondAttribute="bottom" id="bXu-Xj-EI4"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Task" id="ppr-p3-68Y">
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="3bV-IM-Mjv">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="BYZ-38-t0r" id="hwp-8z-Glk"/>
+                                <segue destination="8be-Pm-6Ae" kind="show" id="zaR-DH-Y7S"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="EHM-Y4-hZn">
+                            <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="editButtonTapped:" destination="BYZ-38-t0r" id="NFQ-Zd-x1D"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="137.18140929535232"/>
+        </scene>
+        <!--Input View Controller-->
+        <scene sceneID="yQt-O3-41i">
+            <objects>
+                <viewController id="8be-Pm-6Ae" customClass="InputViewController" customModule="Populate_UITableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MHC-66-dmr"/>
+                        <viewControllerLayoutGuide type="bottom" id="mER-uL-y2f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dAQ-Qe-BMV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Tiz-wF-zIX">
+                                <rect key="frame" x="100" y="298.5" width="175" height="70"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please Enter Something" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GvC-o7-ebp">
+                                        <rect key="frame" x="0.0" y="0.0" width="175" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Xj-9u-ZrJ">
+                                        <rect key="frame" x="69" y="40" width="37" height="30"/>
+                                        <state key="normal" title="Done"/>
+                                        <connections>
+                                            <action selector="doneButtonTapped:" destination="8be-Pm-6Ae" eventType="touchUpInside" id="zNX-24-YqS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tiz-wF-zIX" firstAttribute="centerX" secondItem="dAQ-Qe-BMV" secondAttribute="centerX" id="5ey-8x-dBR"/>
+                            <constraint firstItem="Tiz-wF-zIX" firstAttribute="centerY" secondItem="dAQ-Qe-BMV" secondAttribute="centerY" id="xt7-uV-X7t"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textFieldOultet" destination="GvC-o7-ebp" id="U98-eL-zhh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gyV-ey-78A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="873.91304347826099"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4qG-hh-3S1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jCK-iJ-3yn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SUM-yb-zQW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mWb-wf-0KO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qIk-qw-5cv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
