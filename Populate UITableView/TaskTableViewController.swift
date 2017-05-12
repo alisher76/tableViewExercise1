@@ -37,7 +37,6 @@ class TaskTableViewController: UIViewController, UITableViewDelegate {
     
     
     
-    
     @IBAction func editButtonTapped(_ sender: Any) {
         OperationQueue.main.addOperation {
         
@@ -109,6 +108,9 @@ class Task: NSObject, UITableViewDataSource {
         cell.textLabel?.text = titleName as String
         return cell
     }
+    
+    
+    
     
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let movingObjects = title[sourceIndexPath.row]
